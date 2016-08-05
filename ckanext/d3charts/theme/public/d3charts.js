@@ -72,13 +72,14 @@ this.ckan.views.basiccharts = this.ckan.views.basiccharts || {};
     return result;
   }
 
+  // TODO Assess usage, according to call to specific js in "charts" folder
   function prepareDataForPlot(fields, records, xAxis, yAxis, params) {
     var grouppedData = convertAndGroup(fields, records, params),
         xAxisMode = xAxis && xAxis.mode,
         yAxisMode = yAxis.mode,
         areWePlottingTime = (yAxisMode === "time" || xAxisMode === "time"),
         barWidth = areWePlottingTime ? 60*60*24*30*1000 : 0.5,
-        // CHECK IT!
+        
         chartTypes = {
           lines: { show: true },
           bars: {
@@ -100,7 +101,7 @@ this.ckan.views.basiccharts = this.ckan.views.basiccharts || {};
     });
   }
 
-  // CHECK IT!!
+  // TODO Tranform to use js from charts folder, according to the chart type
   function plotConfig(fields, params) {
     var config,
         xAxisType = fields[params.x_axis],

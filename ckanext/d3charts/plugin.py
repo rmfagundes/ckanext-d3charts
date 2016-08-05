@@ -8,6 +8,7 @@ not_empty = p.toolkit.get_validator('not_empty')
 ignore_missing = p.toolkit.get_validator('ignore_missing')
 ignore_empty = p.toolkit.get_validator('ignore_empty')
 
+# Charts Superclass
 class D3BaseChart(p.SingletonPlugin):
     '''Class with methods common to all d3 charts'''
 
@@ -59,7 +60,7 @@ class D3BaseChart(p.SingletonPlugin):
     def form_template(self, context, data_dict):
         return 'd3_basechart_form.html'
 
-
+# Charts
 class D3CalendarChart(D3BaseChart):
 
     CHART_TYPE = 'ckan_d3_calendar'
@@ -92,7 +93,8 @@ class D3HistogramChart(D3BaseChart):
     def form_template(self, context, data_dict):
         return 'd3_histogramchart_form.html'
 
-
+# Grid component
+# TODO Assess removal (if no form should be used)
 class BasicGrid(p.SingletonPlugin):
 
     p.implements(p.IConfigurer, inherit=True)
@@ -161,7 +163,7 @@ class BasicGrid(p.SingletonPlugin):
         if fields:
             resource_view['fields'] = convert_to_string(fields)
 
-
+# General purpose functions
 def _view_data(resource_view):
     data = {
         'resource_id': resource_view['resource_id'],
@@ -198,6 +200,7 @@ def convert_to_string(value):
     return value
 
 
+# TODO Assess removal (used only on GRID)
 def validate_fields(key, converted_data, errors, context):
     try:
         resource = {'id': converted_data['resource_id',]}
