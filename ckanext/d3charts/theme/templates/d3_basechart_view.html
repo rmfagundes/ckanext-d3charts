@@ -1,11 +1,9 @@
 {% resource 'd3charts/main' %}
 
-<div
-  data-module = "d3charts_view"
-  data-module-chart-type = "{{ chart_type }}"
-  data-module-resource-id = "{{ resource.id }}"
-  data-module-resource-view = "{{ h.dump_json(resource_view) }}"
-  id = "ckanD3Chart-{{ resource_view.id }}"
-  class = "ckan_d3_chart {{ chart_type }}"
-  >
+<div data-module = "d3charts_view"
+     data-module-chart-type = "{{ chart_type }}"
+     data-module-resource-id = "{{ resource.id }}"
+     data-module-resource-view = "{{ h.dump_json(resource_view) }}"
+     id = "ckanD3Chart-{{ resource_view.id }}"
+     class = "ckan_d3_chart {{ chart_type }}">
 </div>
