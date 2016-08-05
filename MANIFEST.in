@@ -1,0 +1,2 @@
+recursive-include    ckanext/d3charts/theme         *
+recursive-include    ckanext/d3charts/basicgrid     *
