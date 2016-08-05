@@ -1,0 +1,48 @@
+/* Common */
+.ckan_d3_chart {
+    text-align: center;
+}
+
+.ckan_d3_chart svg {
+  padding: 2em;
+}
+
+
+/* D3 Calendar */
+.ckan_d3_calendar_day {
+  fill: #fff;
+  stroke: #ccc;
+}
+
+.ckan_d3_calendar_month {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+.ckan_d3_calendar_RdYlGn .q0-11{fill:rgb(165,0,38)}
+.ckan_d3_calendar_RdYlGn .q1-11{fill:rgb(215,48,39)}
+.ckan_d3_calendar_RdYlGn .q2-11{fill:rgb(244,109,67)}
+.ckan_d3_calendar_RdYlGn .q3-11{fill:rgb(253,174,97)}
+.ckan_d3_calendar_RdYlGn .q4-11{fill:rgb(254,224,139)}
+.ckan_d3_calendar_RdYlGn .q5-11{fill:rgb(255,255,191)}
+.ckan_d3_calendar_RdYlGn .q6-11{fill:rgb(217,239,139)}
+.ckan_d3_calendar_RdYlGn .q7-11{fill:rgb(166,217,106)}
+.ckan_d3_calendar_RdYlGn .q8-11{fill:rgb(102,189,99)}
+.ckan_d3_calendar_RdYlGn .q9-11{fill:rgb(26,152,80)}
+.ckan_d3_calendar_RdYlGn .q10-11{fill:rgb(0,104,55)}
+
+/* D3 Histogram */
+.ckan_d3_histogram rect {
+  fill: steelblue;
+}
+
+.ckan_d3_histogram text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+.ckan_d3_histogram .axis--x text {
+  fill: #222;
+}

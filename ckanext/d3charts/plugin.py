@@ -11,7 +11,7 @@ ignore_empty = p.toolkit.get_validator('ignore_empty')
 class D3BaseChart(p.SingletonPlugin):
     '''Class with methods common to all d3 charts'''
 
-    CHART_TYPE = 'base'
+    CHART_TYPE = 'd3_base'
     GROUP_BY_IS_REQUIRED = False
 
     p.implements(p.IConfigurer, inherit=True)
@@ -62,7 +62,7 @@ class D3BaseChart(p.SingletonPlugin):
 
 class D3CalendarChart(D3BaseChart):
 
-    CHART_TYPE = 'calendar'
+    CHART_TYPE = 'ckan_d3_calendar'
 
     def info(self):
         info = super(D3CalendarChart, self).info()
@@ -79,7 +79,7 @@ class D3CalendarChart(D3BaseChart):
 
 class D3HistogramChart(D3BaseChart):
 
-    CHART_TYPE = 'histogram'
+    CHART_TYPE = 'ckan_d3_histogram'
 
     def info(self):
         info = super(D3HistogramChart, self).info()
