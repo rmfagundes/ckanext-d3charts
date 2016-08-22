@@ -94,7 +94,6 @@ class D3HistogramChart(D3BaseChart):
         return 'd3_histogramchart_form.html'
 
 # Grid component
-# TODO Assess removal (if no form should be used)
 class BasicGrid(p.SingletonPlugin):
 
     p.implements(p.IConfigurer, inherit=True)
@@ -109,7 +108,7 @@ class BasicGrid(p.SingletonPlugin):
         rootdir = os.path.dirname(os.path.dirname(here))
         extra_template_paths = config.get('extra_template_paths', '')
 
-        template_dir = os.path.join(rootdir, 'ckanext', 'basiccharts',
+        template_dir = os.path.join(rootdir, 'ckanext', 'd3charts',
                                     'basicgrid', 'templates')
         config['extra_template_paths'] = ','.join([template_dir,
                                                   extra_template_paths])
@@ -124,7 +123,7 @@ class BasicGrid(p.SingletonPlugin):
             'orientation': [ignore_missing],
         }
 
-        return {'name': 'basicgrid',
+        return {'name': 'd3grid',
                 'title': 'Basic Grid',
                 'icon': 'table',
                 'iframed': False,
@@ -200,7 +199,7 @@ def convert_to_string(value):
     return value
 
 
-# TODO Assess removal (used only on GRID)
+# Used only on GRID
 def validate_fields(key, converted_data, errors, context):
     try:
         resource = {'id': converted_data['resource_id',]}
