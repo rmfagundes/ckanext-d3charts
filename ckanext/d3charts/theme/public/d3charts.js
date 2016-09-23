@@ -1,6 +1,6 @@
 this.ckan = this.ckan || {};
 this.ckan.views = this.ckan.views || {};
-this.ckan.views.basiccharts = this.ckan.views.basiccharts || {};
+this.ckan.views.d3charts = this.ckan.views.d3charts || {};
 
 (function(self, $) {
   "use strict";
@@ -27,13 +27,13 @@ this.ckan.views.basiccharts = this.ckan.views.basiccharts || {};
           config = plotConfig(fields, _params),
           hits = query.hits,
           data;
-
+      /*
       if (sortData) {
         hits = sortData(hits);
       }
 
       data = prepareDataForPlot(fields, hits, config.xaxis, config.yaxis, _params);
-
+      */
       $.plot(elementId, data, config);
     });
   };
@@ -73,6 +73,7 @@ this.ckan.views.basiccharts = this.ckan.views.basiccharts || {};
   }
 
   // TODO Assess usage, according to call to specific js in "charts" folder
+  /*
   function prepareDataForPlot(fields, records, xAxis, yAxis, params) {
     var grouppedData = convertAndGroup(fields, records, params),
         xAxisMode = xAxis && xAxis.mode,
@@ -100,8 +101,10 @@ this.ckan.views.basiccharts = this.ckan.views.basiccharts || {};
       return dataForPlot;
     });
   }
+  */
 
   // TODO Tranform to use js from charts folder, according to the chart type
+  /*
   function plotConfig(fields, params) {
     var config,
         xAxisType = fields[params.x_axis],
@@ -160,8 +163,8 @@ this.ckan.views.basiccharts = this.ckan.views.basiccharts || {};
     }
 
     return config;
-  }
-
+  }*/
+/*
   function convertAndGroup(fields, records, params) {
     var result = {},
         xAxisParser = parsers[fields[params.x_axis]],
@@ -190,5 +193,5 @@ this.ckan.views.basiccharts = this.ckan.views.basiccharts || {};
       }
     });
     return result;
-  }
-})(this.ckan.views.basiccharts, this.jQuery);
+  } */
+})(this.ckan.views.d3charts, this.jQuery);
