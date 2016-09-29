@@ -2,7 +2,7 @@ var dataset = null,
     resource_id = "",
     nesting_field = "Data do Acidente",
     parseTime = d3.timeParse("%Y-%m-%d"),
-    url_csv = "http://localhost:5000/dataset/96fb8bbd-7d07-4419-bb0b-eaffaad9e744/resource/7f496ca0-3f08-4397-9e5a-bd4aa2a86949/download/cat.csv";
+    url_csv = "http://opendata.mpt.mp.br/dataset/0b4131a4-c97a-4e26-b9bb-5bf8d730b166/resource/32d74acd-e433-4f62-9988-860299d3814a/download/cat.csv";
 
 function getDivisor(ds) {
     return Math.max.apply(null, ds.values());
